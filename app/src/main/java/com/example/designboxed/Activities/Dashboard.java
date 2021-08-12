@@ -22,7 +22,6 @@ List<ModelAssignedSurvey> modelAssignedSurveys;
         setContentView(binding.getRoot());
         recyclerPerform();
     }
-
     private void recyclerPerform() {
         modelAssignedSurveys = new ArrayList<>();
         binding.recAssignedSurvey.setHasFixedSize(true);

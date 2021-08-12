@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignBoxed">
+        <activity android:name=".Quiz.QuizFour"></activity>
+        <activity android:name=".Quiz.QuizThree" />
+        <activity android:name=".Quiz.QuizTwo" />
+        <activity android:name=".Quiz.QuizOne" />
         <activity
             android:name=".Activities.Notification_Activity"
             android:exported="true" />
@@ -19,6 +23,7 @@
         <activity
             android:name=".Activities.Profile_Activity"
             android:exported="true" />
+        <activity android:name=".Activities.Dashboard" />
         <activity android:name=".Activities.Login" />
         <activity android:name=".SplashScreen">
             <intent-filter>
