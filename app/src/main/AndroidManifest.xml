@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignBoxed">
-        <activity android:name=".Activities.Login"></activity>
+        <activity android:name=".Activities.Dashboard"></activity>
+        <activity android:name=".Activities.ResetPassword" />
+        <activity android:name=".Activities.ForgetPassword" />
+        <activity android:name=".Activities.Login" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
