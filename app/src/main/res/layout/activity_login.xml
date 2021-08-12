@@ -126,8 +126,8 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 =========
-
-    <include layout="@layout/layout_navigation_drawer" />
+<!---->
+<!--    <include layout="@layout/layout_navigation_drawer" />-->
 
 >>>>>>>>> Temporary merge branch 2
 </RelativeLayout>

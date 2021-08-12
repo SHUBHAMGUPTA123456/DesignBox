@@ -10,7 +10,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:id="@+id/pressBack"
         app:cardCornerRadius="40dp"
+        android:padding="5dp"
         app:cardBackgroundColor="@color/color_back_navi"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="30dp">

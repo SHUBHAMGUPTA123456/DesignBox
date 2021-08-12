@@ -1,10 +1,9 @@
 package com.example.designboxed.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-import com.example.designboxed.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.designboxed.databinding.ActivityEditProfileBinding;
 
 public class EditProfile extends AppCompatActivity {
@@ -14,7 +13,11 @@ public class EditProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        editProfileBinding=ActivityEditProfileBinding.inflate(getLayoutInflater());
+        editProfileBinding = ActivityEditProfileBinding.inflate(getLayoutInflater());
         setContentView(editProfileBinding.getRoot());
+        editProfileBinding.pressBack.setOnClickListener(v -> {
+            onBackPressed();
+            finish();
+        });
     }
 }
