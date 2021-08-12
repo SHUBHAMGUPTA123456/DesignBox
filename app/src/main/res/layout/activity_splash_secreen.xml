@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_small_rectangle"
     tools:context=".SplashScreen">
+
     <LinearLayout
         android:id="@+id/lnrOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:alpha=".6"
-        android:background="@color/pink">
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/transparent_img"/>
+        android:background="@color/pink"
+        android:orientation="vertical">
+
         <ImageView
-            android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/transparent_img"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_centerInParent="true"
-        android:padding="30dp"
-        android:background="">
+            android:scaleType="fitXY"
+            android:src="@drawable/transparent_img" />
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:src="@drawable/icon_logo" />
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/transparent_img" />
     </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="100dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_logo" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 </RelativeLayout>
