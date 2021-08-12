@@ -24,6 +24,10 @@ public class Login extends AppCompatActivity {
             overridePendingTransition(R.anim.right_in,R.anim.right_out);
             finish();
         });
-        binding.loginBtn.setClickable(true);
+        binding.loginBtn.setOnClickListener(v -> {
+            startActivity(new Intent(this, Dashboard.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+            finish();
+        });
     }
 }

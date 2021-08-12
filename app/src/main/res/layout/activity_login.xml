@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.Login">
+<!--<<<<<<<<< Temporary merge branch 1-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -124,4 +125,9 @@
                 android:backgroundTint="@color/black"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+=========
+
+    <include layout="@layout/layout_navigation_drawer" />
+
+>>>>>>>>> Temporary merge branch 2
 </RelativeLayout>
