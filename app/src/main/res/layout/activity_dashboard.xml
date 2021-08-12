@@ -35,6 +35,7 @@
             android:layout_margin="16dp"/>
     </RelativeLayout>
         <LinearLayout
+            android:id="@+id/lnrTwo"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,10 +45,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
                 app:cardBackgroundColor="@color/white">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
                     <TextView
                         android:id="@+id/txtTodaysTarget"
                         android:layout_width="match_parent"
@@ -62,17 +66,102 @@
                         android:text="50"
                         android:textStyle="bold"
                         android:textSize="18sp"
+                        android:layout_toStartOf="@id/imgCalendor"
                         android:layout_below="@id/txtTodaysTarget"
                         android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"
                         android:textColor="@color/black"/>
                     <ImageView
+                        android:id="@+id/imgCalendor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/img_calendor_one"
                         android:layout_alignParentEnd="true"
+                        android:layout_margin="4dp"
                         android:layout_below="@id/txtTodaysTarget"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <TextView
+                        android:id="@+id/txtAchieved"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Todays Achieved"
+                        android:textSize="16sp"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_toStartOf="@id/imgCalendorTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"
+                        android:layout_below="@id/txtAchieved"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"/>
+                    <ImageView
+                        android:id="@+id/imgCalendorTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_calendor_one"
+                        android:layout_margin="4dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/txtAchieved"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/relOne"
+            android:layout_width="match_parent"
+            android:translationZ="4dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_servey_corner"
+            android:layout_below="@id/lnrTwo"
+            android:paddingTop="16dp">
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rescently\nAssigned Survey"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:layout_toStartOf="@id/viewAll"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/viewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:textSize="12sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recAssignedSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_rec_servey_list"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_below="@id/txtHeading"/>
+        </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
