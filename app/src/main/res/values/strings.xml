@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DesignBoxed</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet. Eum similique quos aut nulla praesentium ea delectus voluptatem. Non ducimus velit qui dolor minima sed veniam internos cum cumque obcaecati.</string>
+
+    <string-array name="cardType">
+        <item>Card Type 1</item>
+        <item>Card Type 2</item>
+        <item>Card Type 3</item>
+        <item>Card Type 4</item>
+    </string-array>
 </resources>
