@@ -15,17 +15,19 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        clickPerform();
+    }
 
-        findViewById(R.id.img).setOnClickListener(v->{
-            startActivity(new Intent(getApplicationContext(),Profile_Activity.class));
+    private void clickPerform() {
+        binding.goToForget.setOnClickListener(v -> {
+            startActivity(new Intent(this, ForgetPassword.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+            finish();
         });
-
-        findViewById(R.id.home).setOnClickListener(v->{
-            startActivity(new Intent(getApplicationContext(),EditProfile.class));
-        });
-
-        findViewById(R.id.noti).setOnClickListener(v->{
-            startActivity(new Intent(getApplicationContext(),Notification_Activity.class));
+        binding.loginBtn.setOnClickListener(v -> {
+            startActivity(new Intent(this, Dashboard.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+            finish();
         });
     }
 }
