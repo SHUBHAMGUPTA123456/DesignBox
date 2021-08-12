@@ -25,17 +25,18 @@
             android:layout_height="wrap_content"
             android:src="@drawable/transparent_img"/>
     </LinearLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="100dp"
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_centerInParent="true"
-        app:cardElevation="0dp"
-        android:padding="16dp">
+        android:padding="30dp"
+        android:background="">
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:src="@drawable/icon_logo"/>
-    </androidx.cardview.widget.CardView>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:src="@drawable/icon_logo" />
+    </LinearLayout>
 </RelativeLayout>
