@@ -30,7 +30,6 @@ public class Dashboard extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
         });
     }
-
     private void recyclerPerform() {
         modelAssignedSurveys = new ArrayList<>();
         binding.recAssignedSurvey.setHasFixedSize(true);
