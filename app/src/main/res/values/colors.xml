@@ -11,4 +11,6 @@
     <color name="color_back_navi">#1f2227</color>
     <color name="light_pink">#FFF1F3</color>
     <color name="btn_red">#CD2A42</color>
+    <color name="txt_color">#CD2A42</color>
+    <color name="txt_color_black">#FF000000</color>
 </resources>

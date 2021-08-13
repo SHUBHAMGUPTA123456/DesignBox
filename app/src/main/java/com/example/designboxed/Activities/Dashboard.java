@@ -29,6 +29,9 @@ public class Dashboard extends AppCompatActivity {
         binding.menuIcon.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
         });
+        binding.notificationIcon.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), Notification_Activity.class));
+        });
     }
     private void recyclerPerform() {
         modelAssignedSurveys = new ArrayList<>();

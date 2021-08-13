@@ -81,6 +81,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txtCardTytpe"
@@ -108,14 +109,153 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_alignParentLeft="true"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtNamePerson"
+                    android:text="S. Sanguvathy" />
+                <TextView
                     android:id="@+id/txtRlnType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:text="RLN_TYPE"
                     android:textStyle="bold" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRlnType"
+                    android:text="S. Sanguvathy" />
 
             </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtlasNamePerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Last Name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtlasNamePerson"
+                    android:text="S. Sanguvathy" />
+                <TextView
+                    android:id="@+id/txtMiddelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Middle Name"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtMiddelName"
+                    android:text="S. Sanguvathy" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/gendertxt"
+                    android:gravity="left"
+                    android:text="Age. 41" />
+
+                <TextView
+                    android:id="@+id/gendertxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="Gender: F" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/phoneTxt"
+                    android:gravity="left"
+                    android:text="DOB: 1979-08-19" />
+
+                <TextView
+                    android:id="@+id/phoneTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="PHONE: N/A" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="Building Name: " />
+
+                <TextView
+                    android:maxLines="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:layout_weight="1.3"
+                    android:layout_gravity="right"
+                    android:text="Peenya Plantation,Siddhartha Nagar1 (Northeren Side) 1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="Booth Address" />
+
+                <TextView
+                    android:maxLines="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:layout_weight="1.3"
+                    android:layout_gravity="right"
+                    android:text="Govt. Tamil" />
+
+            </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

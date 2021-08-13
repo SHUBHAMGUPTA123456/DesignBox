@@ -127,6 +127,7 @@
             <RelativeLayout
                 android:layout_width="250dp"
                 android:layout_height="40dp"
+                android:id="@+id/shareApp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/back_rectangle_gray">
 
@@ -147,6 +148,7 @@
             <RelativeLayout
                 android:layout_width="250dp"
                 android:layout_height="40dp"
+                android:id="@+id/termsnConditions"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/back_rectangle_gray">
 
@@ -157,7 +159,8 @@
                     android:layout_marginLeft="20dp"
                     android:drawableLeft="@drawable/ic_terms"
                     android:drawablePadding="7dp"
-                    android:text="Term of Use" android:drawableTint="@color/white"
+                    android:drawableTint="@color/white"
+                    android:text="Term of Use"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -166,6 +169,7 @@
 
             <RelativeLayout
                 android:layout_width="250dp"
+                android:id="@+id/privcyPolicy"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/back_rectangle_gray">
