@@ -110,11 +110,21 @@
             android:layout_below="@id/relLay"
             android:textColor="@color/black"
             android:layout_marginEnd="12dp"/>
-        <View
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:layout_below="@id/progressNumber"
-            android:background="@color/purple_200"/>
+            android:layout_height="12dp"
+            android:layout_below="@+id/progressNumber"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            app:rpbBackgroundColor="@color/white"
+            app:rpbCornerRadius="20dp"
+            app:rpbProgress="50"
+            app:rpbProgressColor="@color/txt_color"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="true"
+            app:rpbTextSize="10sp" />
     </RelativeLayout>
 </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -16,7 +16,6 @@
         <activity
             android:name=".Navigation.PrivacyPolicy"
             android:exported="true" />
-        <activity android:name=".Quiz.QuizFour" />
         <activity android:name=".Quiz.QuizThree" />
         <activity android:name=".Quiz.QuizTwo" />
         <activity android:name=".Quiz.QuizOne" />
