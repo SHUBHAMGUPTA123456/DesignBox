@@ -29,14 +29,39 @@
             android:layout_marginTop="16dp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            app:rpbBackgroundColor="@color/grey"
+            app:rpbCornerRadius="20dp"
+            app:rpbProgress="0"
+            app:rpbProgressColor="@color/txt_color"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="true"
+            app:rpbTextSize="10sp" />
+        <TextView
+            android:id="@+id/progressNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="0/5"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/progressBar"
+            android:textColor="@color/black"
+            android:layout_marginEnd="16dp"/>
         <TextView
             android:id="@+id/question"
-            android:layout_marginTop="40dp"
-            android:layout_below="@id/title"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/progressNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="12dp"
             android:text="1. Lorem ipsum dolor sit amet, consectetur\n
 adipiscing elit,"/>
         <LinearLayout
@@ -84,6 +109,7 @@ adipiscing elit,"/>
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/goToNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="150dp"

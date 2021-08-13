@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Fragment.AllAssignedSurvay">
+    tools:context=".Fragment.CompletedSurvay">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recCompletedSurvay"/>
+        android:id="@+id/recCompletedSurvey"/>
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.designboxed.Activities.Fragment;
+package com.example.designboxed.Fragment;
 
 import android.os.Bundle;
 
@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import com.example.designboxed.Adaptor.AdapterAllAssignedSurvay;
 import com.example.designboxed.Model.ModelCompletedSurvay;
 import com.example.designboxed.databinding.FragmentAllAssignedServiceBinding;
-import com.example.designboxed.databinding.FragmentCompletedSurvayBinding;
 
 import java.util.ArrayList;
 import java.util.List;

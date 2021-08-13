@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.designboxed.Activities.QuestionForm;
 import com.example.designboxed.Quiz.QuizOne;
 import com.example.designboxed.R;
 import com.example.designboxed.databinding.ActivityShowServeyDetailsBinding;
@@ -21,7 +22,7 @@ public class ShowServeyDetails extends AppCompatActivity {
 
     private void clickPerform() {
         binding.startSurvey.setOnClickListener(v -> {
-            startActivity(new Intent(this, QuizOne.class));
+            startActivity(new Intent(this, QuestionForm.class));
             overridePendingTransition(R.anim.right_in,R.anim.right_out);
         });
         binding.imBlack.setOnClickListener(v -> {

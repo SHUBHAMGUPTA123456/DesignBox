@@ -121,7 +121,6 @@
             app:rpbBackgroundColor="@color/grey"
             app:rpbCornerRadius="20dp"
             app:rpbProgress="50"
-
             app:rpbProgressColor="@color/txt_color"
             app:rpbProgressTextColor="@color/white"
             app:rpbShowProgressText="true"

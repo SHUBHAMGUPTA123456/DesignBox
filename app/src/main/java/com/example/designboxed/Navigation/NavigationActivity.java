@@ -40,7 +40,10 @@ public class NavigationActivity extends AppCompatActivity {
         binding.privcyPolicy.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), PrivacyPolicy.class).putExtra("key","Privacy & Policy"));
         });
-
+        binding.img.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+        });
         binding.shareApp.setOnClickListener(v -> {
             try {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);

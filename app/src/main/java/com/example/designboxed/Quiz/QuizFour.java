@@ -2,6 +2,7 @@ package com.example.designboxed.Quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.designboxed.R;
@@ -15,6 +16,13 @@ public class QuizFour extends AppCompatActivity {
         binding = ActivityQuizFourBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         myTool();
+        clickPerform();
+    }
+    private void clickPerform() {
+        binding.goToNext.setOnClickListener(v -> {
+            startActivity(new Intent(this, QuizFive.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+        });
     }
     private void myTool() {
         binding.toolBar.setNavigationIcon(R.drawable.icon_back_btn);
