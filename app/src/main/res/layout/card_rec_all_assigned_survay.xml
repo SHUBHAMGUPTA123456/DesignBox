@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/lnrOne"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/img_one"/>
+    <Button
+        android:id="@+id/openServey"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Open Servey"
+        android:textAllCaps="false"
+        android:minWidth="150dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:translationZ="2dp"
+        android:background="@drawable/bg_btn_16dp"
+        android:backgroundTint="@color/black"/>
+</LinearLayout>
+    <RelativeLayout
+        android:layout_toEndOf="@id/lnrOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtHowTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="How important is the third dose of corona vaccine?"/>
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/txtHowTo"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipis-
+-cing elit."/>
+        <RelativeLayout
+            android:id="@+id/relLay"
+            android:layout_below="@id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/userIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_with_stroke"
+                android:padding="4dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_person_user"/>
+            <TextView
+                android:id="@+id/txtAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/userIcon"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_share"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_below="@id/relLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today: 15:10"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginEnd="12dp"/>
+        <TextView
+            android:id="@+id/progressNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="2/5"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/relLay"
+            android:textColor="@color/black"
+            android:layout_marginEnd="12dp"/>
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_below="@+id/progressNumber"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            app:rpbBackgroundColor="@color/white"
+            app:rpbCornerRadius="20dp"
+            app:rpbProgress="50"
+            app:rpbProgressColor="@color/txt_color"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="true"
+            app:rpbTextSize="10sp" />
+    </RelativeLayout>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
