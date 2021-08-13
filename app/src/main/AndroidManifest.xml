@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesignBoxed">
-        <activity android:name=".Activities.AllSurvay"></activity>
+        <activity android:name=".Activities.AllSurvay"/>
         <activity android:name=".Quiz.SurvayCompleted" />
+        <activity android:name=".SurveyDetails.ShowServeyDetails" />
         <activity android:name=".Quiz.QuizFive" />
         <activity android:name=".Quiz.QuizFour" />
         <activity

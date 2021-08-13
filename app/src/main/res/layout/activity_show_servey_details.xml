@@ -3,11 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f3f3f3"
     android:orientation="vertical"
     tools:context=".SurveyDetails.ShowServeyDetails">
 
-    <include layout="@layout/default_toolbar_with_logo" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/im_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/icon_logo" />
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -315,7 +338,8 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <com.google.android.material.button.MaterialButton
+            <Button
+                android:id="@+id/startSurvey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
@@ -324,18 +348,23 @@
                 android:paddingBottom="6dp"
                 android:text="Start Survey"
                 android:textAllCaps="false"
+                android:background="@drawable/bg_btn_16dp"
+                android:backgroundTint="@color/btn_red"
                 android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
+            <Button
+                android:id="@+id/addNew"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="8dp"
                 android:paddingLeft="50dp"
                 android:paddingTop="6dp"
                 android:paddingRight="50dp"
                 android:paddingBottom="6dp"
                 android:text="Add New"
                 android:textAllCaps="false"
+                android:background="@drawable/bg_btn_16dp"
+                android:backgroundTint="@color/green"
                 android:textColor="@color/white" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </RelativeLayout>

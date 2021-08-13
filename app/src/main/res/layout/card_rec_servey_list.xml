@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="320dp"
     android:layout_height="wrap_content"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/openServey"
+            android:id="@+id/openSurvey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -21,7 +22,7 @@
             android:background="@drawable/bg_btn_16dp"
             android:backgroundTint="@color/black"
             android:minWidth="160dp"
-            android:text="Open Servey"
+            android:text="Open Survey"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:translationZ="2dp" />
@@ -38,7 +39,7 @@
             android:id="@+id/imgIcon"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_below="@id/openServey"
+            android:layout_below="@id/openSurvey"
             android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             android:src="@drawable/img_one" />
@@ -50,7 +51,7 @@
             android:layout_below="@id/imgIcon"
             android:layout_centerHorizontal="true"
             android:layout_margin="8dp"
-            android:text="Heading of the Surway form"
+            android:text="Heading of the Survey form"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />

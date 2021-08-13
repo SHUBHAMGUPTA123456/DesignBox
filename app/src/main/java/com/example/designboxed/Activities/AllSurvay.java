@@ -22,8 +22,8 @@ public class AllSurvay extends AppCompatActivity {
         setContentView(binding.getRoot());
         tabLayout = binding.tabLay;
         viewPager = binding.viewPager;
-        tabLayout.addTab(tabLayout.newTab().setText("Completed Survay"));
-        tabLayout.addTab(tabLayout.newTab().setText("All Assigned Survay"));
+        tabLayout.addTab(tabLayout.newTab().setText("Completed Survey"));
+        tabLayout.addTab(tabLayout.newTab().setText("All Assigned Survey"));
         myTool();
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         viewPagerAdapter =new ViewPagerAdapter(this,getSupportFragmentManager(),tabLayout.getTabCount());
@@ -44,7 +44,6 @@ public class AllSurvay extends AppCompatActivity {
             }
         });
     }
-
     private void myTool() {
         binding.toolBar.setNavigationIcon(R.drawable.icon_back_btn);
         binding.toolBar.setNavigationOnClickListener(v -> {

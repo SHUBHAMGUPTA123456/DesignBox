@@ -1,6 +1,7 @@
 package com.example.designboxed.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.designboxed.Model.ModelAssignedSurvey;
+import com.example.designboxed.SurveyDetails.ShowServeyDetails;
 import com.example.designboxed.databinding.CardRecServeyListBinding;
 
 import java.util.List;
@@ -30,7 +32,11 @@ public class AdapterAssignedSurvey extends RecyclerView.Adapter<AdapterAssignedS
 
     @Override
     public void onBindViewHolder(@NonNull holderVie holder, int position) {
-
+        holder.cBinding.openSurvey.setOnClickListener(v -> {
+            Intent ig = new Intent(context, ShowServeyDetails.class);
+            ig.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(ig);
+        });
     }
 
     @Override
