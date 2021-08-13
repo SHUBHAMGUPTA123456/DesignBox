@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.designboxed.Activities.Login;
 import com.example.designboxed.R;
+import com.example.designboxed.Utils.M;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -20,8 +21,14 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), Login.class));
+                if (M.getUserToken(getApplicationContext()).equalsIgnoreCase("0")){
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                    finish();
+                    return;
+                }
+                startActivity(new Intent(getApplicationContext(), Dashboard.class));
                 finish();
+
             }
         },2000);
     }

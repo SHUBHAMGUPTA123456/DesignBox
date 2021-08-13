@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.designboxed.Activities.AllSurvay;
 import com.example.designboxed.Activities.Dashboard;
+import com.example.designboxed.Activities.Login;
 import com.example.designboxed.Activities.Notification_Activity;
 import com.example.designboxed.Activities.Profile_Activity;
 import com.example.designboxed.BuildConfig;
@@ -39,6 +41,18 @@ public class NavigationActivity extends AppCompatActivity {
         });
         binding.privcyPolicy.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), PrivacyPolicy.class).putExtra("key","Privacy & Policy"));
+        });
+        binding.logout.setOnClickListener(v -> {
+            AlertDialog.Builder  builder=new AlertDialog.Builder(this);
+            builder.setTitle("Alert !");
+            builder.setCancelable(false);
+            builder.setMessage("Do you want to Logout ?");
+            builder.setPositiveButton("Yes",(dialog, which) -> {
+                finishAffinity();
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                finish();
+            }).setNegativeButton("No",(dialog, which) -> {dialog.dismiss();});
+            builder.show();
         });
 
         binding.shareApp.setOnClickListener(v -> {
