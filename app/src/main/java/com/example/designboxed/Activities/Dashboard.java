@@ -17,8 +17,6 @@ import java.util.List;
 public class Dashboard extends AppCompatActivity {
     ActivityDashboardBinding binding;
     List<ModelAssignedSurvey> modelAssignedSurveys;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

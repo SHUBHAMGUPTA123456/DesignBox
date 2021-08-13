@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.designboxed.Activities.AllSurvay;
 import com.example.designboxed.Activities.Dashboard;
 import com.example.designboxed.Activities.Notification_Activity;
 import com.example.designboxed.Activities.Profile_Activity;
@@ -27,6 +28,8 @@ public class NavigationActivity extends AppCompatActivity {
         binding.home.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), Dashboard.class));
         });
-
+        binding.allSurvay.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), AllSurvay.class));
+        });
     }
 }

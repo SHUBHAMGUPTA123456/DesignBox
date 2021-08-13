@@ -1,4 +1,4 @@
-package com.example.designboxed;
+package com.example.designboxed.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import com.example.designboxed.Activities.Login;
+import com.example.designboxed.R;
 
 public class SplashScreen extends AppCompatActivity {
 
