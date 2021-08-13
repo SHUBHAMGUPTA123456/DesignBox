@@ -1,120 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="320dp"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="12dp"
-    android:layout_marginStart="8dp"
+    android:layout_width="320dp"
     android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    app:cardCornerRadius="12dp"
     app:cardUseCompatPadding="true">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/openServey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Open Servey"
-        android:textAllCaps="false"
-        android:minWidth="160dp"
-        android:textColor="@color/white"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
-        android:translationZ="2dp"
-        android:background="@drawable/bg_btn_16dp"
-        android:backgroundTint="@color/black"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_share"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_alignParentEnd="true"/>
-    <ImageView
-        android:id="@+id/imgIcon"
-        android:layout_below="@id/openServey"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/img_one"/>
-    <TextView
-        android:id="@+id/txtHeading"
-        android:layout_below="@id/imgIcon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Heading of the Surway form"
-        android:layout_margin="8dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"/>
-    <TextView
-        android:id="@+id/txtShortDesc"
-        android:layout_below="@id/txtHeading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Short Description"
-        android:layout_marginStart="8dp"
-        android:textSize="14sp"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"/>
-<!--    <com.mackhartley.roundedprogressbar.RoundedProgressBar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="12dp"-->
-<!--        android:layout_marginTop="@dimen/margin_8"-->
-<!--        android:layout_marginStart="40dp"-->
-<!--        android:layout_marginEnd="@dimen/margin_16"-->
-<!--        app:rpbBackgroundColor="@color/white"-->
-<!--        app:rpbCornerRadius="20dp"-->
-<!--        app:rpbProgress="50"-->
-<!--        app:rpbTextSize="12sp"-->
-<!--        app:rpbProgressColor="@color/intro_txt_ttl"-->
-<!--        app:rpbProgressTextColor="@color/white"-->
-<!--        app:rpbShowProgressText="true" />-->
-    <TextView
-        android:id="@+id/progressNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:text="2/5"
-        android:textColor="@color/black"
-        android:layout_marginEnd="12dp"/>
-<!--        android:layout_below="@id/progressBar"/>-->
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="12dp"
-        android:layout_below="@id/progressNumber">
-    <ImageView
-        android:id="@+id/userIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_circle_with_stroke"
-        android:padding="8dp"
-        android:src="@drawable/icon_person_user"/>
-    <TextView
-        android:id="@+id/txtAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Admin"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_marginStart="8dp"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/userIcon"/>
-        <TextView
-            android:layout_below="@id/txtAdmin"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/openServey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Today: 15:10"
-            android:textColor="@color/black"
-            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_btn_16dp"
+            android:backgroundTint="@color/black"
+            android:minWidth="160dp"
+            android:text="Open Servey"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:translationZ="2dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_share" />
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/openServey"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_one" />
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:text="Heading of the Surway form"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtShortDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHeading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:text="Short Description"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_below="@+id/txtShortDesc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            app:rpbBackgroundColor="@color/white"
+            app:rpbCornerRadius="20dp"
+            app:rpbProgress="50"
+            app:rpbProgressColor="@color/txt_color"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="true"
+            app:rpbTextSize="10sp" />
+
+        <TextView
+            android:id="@+id/progressNumber"
+            android:layout_below="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_marginEnd="12dp"
-            android:layout_alignParentEnd="true"/>
+            android:text="2/5"
+            android:textColor="@color/black" />
+        <!--        android:layout_below="@id/progressBar"/>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressNumber"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/userIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_with_stroke"
+                android:padding="8dp"
+                android:src="@drawable/icon_person_user" />
+
+            <TextView
+                android:id="@+id/txtAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/userIcon"
+                android:text="Admin"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAdmin"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:text="Today: 15:10"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
     </RelativeLayout>
-</RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -16,9 +16,8 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_secreen);
-        Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show();
 
-        new Handler().postAtTime(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(), Login.class));

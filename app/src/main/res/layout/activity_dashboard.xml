@@ -28,18 +28,22 @@
                 android:src="@drawable/icon_drawer_menu" />
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="10sp"
                 android:src="@drawable/icon_logo" />
 
             <ImageView
+                android:id="@+id/notificationIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
                 android:src="@drawable/icon_notification_bell" />
         </RelativeLayout>
         <LinearLayout
@@ -60,14 +64,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="12dp">
+
                     <TextView
                         android:id="@+id/txtTodaysTarget"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Todays Target"
-                        android:textSize="16sp"
                         android:layout_centerHorizontal="true"
-                        android:textColor="@color/black"/>
+                        android:text="Todays Target"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -80,14 +85,18 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="8dp"
                         android:textColor="@color/black"/>
+
                     <ImageView
                         android:id="@+id/imgCalendor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/img_calendor_one"
+                        android:layout_below="@id/txtTodaysTarget"
                         android:layout_alignParentEnd="true"
-                        android:layout_margin="4dp"
-                        android:layout_below="@id/txtTodaysTarget"/>
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:src="@drawable/img_calendor_one" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
@@ -141,16 +150,22 @@
             android:background="@drawable/bg_servey_corner"
             android:layout_below="@id/lnrTwo"
             android:paddingTop="16dp">
+
             <TextView
                 android:id="@+id/txtHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rescently\nAssigned Survey"
-                android:layout_margin="8dp"
-                android:textSize="18sp"
-                android:layout_toStartOf="@id/viewAll"
                 android:layout_centerHorizontal="true"
-                android:textColor="@color/black"/>
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"
+                android:alpha=".8"
+                android:layout_marginBottom="8dp"
+                android:layout_toStartOf="@id/viewAll"
+                android:text="Rescently\nAssigned Survey"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/viewAll"
                 android:layout_width="wrap_content"
@@ -162,14 +177,15 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/black"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recAssignedSurvey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/card_rec_servey_list"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_below="@id/txtHeading"
                 android:orientation="horizontal"
-                android:layout_below="@id/txtHeading"/>
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/card_rec_servey_list" />
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
