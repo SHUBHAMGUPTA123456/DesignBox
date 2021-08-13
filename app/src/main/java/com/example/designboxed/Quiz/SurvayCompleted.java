@@ -25,5 +25,10 @@ public class SurvayCompleted extends AppCompatActivity {
             startActivity(new Intent(this, Dashboard.class));
             overridePendingTransition(R.anim.right_in,R.anim.right_out);
         });
+        binding.pressBack.setOnClickListener(v -> {
+            onBackPressed();
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+            finish();
+        });
     }
 }

@@ -25,6 +25,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/simple_ripple"
                 android:src="@drawable/icon_drawer_menu" />
 
             <ImageView
@@ -44,6 +45,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/simple_ripple"
                 android:src="@drawable/icon_notification_bell" />
         </RelativeLayout>
         <LinearLayout

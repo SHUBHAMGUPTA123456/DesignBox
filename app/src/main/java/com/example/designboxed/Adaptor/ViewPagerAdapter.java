@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.designboxed.Activities.Fragment.AllAssignedSurvay;
-import com.example.designboxed.Activities.Fragment.CompletedSurvay;
+import com.example.designboxed.Fragment.AllAssignedSurvay;
+import com.example.designboxed.Fragment.CompletedSurvay;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     Context mContext;

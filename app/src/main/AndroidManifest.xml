@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.DesignBoxed">
-        <activity android:name=".Activities.AllSurvay"/>
+        <activity android:name=".Activities.QuestionForm"></activity>
+        <activity android:name=".Activities.AllSurvay" />
         <activity android:name=".Quiz.SurvayCompleted" />
         <activity android:name=".SurveyDetails.ShowServeyDetails" />
         <activity android:name=".Quiz.QuizFive" />

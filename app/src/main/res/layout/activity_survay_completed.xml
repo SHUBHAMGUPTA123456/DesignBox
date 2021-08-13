@@ -5,6 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Quiz.SurvayCompleted">
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/pressBack"
+        app:cardCornerRadius="40dp"
+        android:padding="5dp"
+        app:cardBackgroundColor="@color/color_back_navi"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Heading of the Survey form"
+        android:textSize="16sp"
+        android:layout_above="@id/progressBar"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="16dp"
+        app:rpbBackgroundColor="@color/grey"
+        app:rpbCornerRadius="20dp"
+        app:rpbProgress="100"
+        android:layout_above="@id/progressNumber"
+        app:rpbProgressColor="@color/txt_color"
+        app:rpbProgressTextColor="@color/white"
+        app:rpbShowProgressText="true"
+        app:rpbTextSize="10sp" />
+    <TextView
+        android:id="@+id/progressNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="5/5"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@id/imgSuccess"
+        android:textColor="@color/black"
+        android:layout_marginEnd="16dp"/>
     <ImageView
         android:id="@+id/imgSuccess"
         android:layout_width="wrap_content"

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".Quiz.QuizOne">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?actionBarSize"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_servey_corner">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bangluru Urban Legeslative Election Survey"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/question"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:text="Q1. How do you feel about the performance of Prime Minister
+Narendra Modi and his Government?"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Very satisfied"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Somewhat satisfied "/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Somewhat unsatisfied"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Very unsatisfied"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Don’t know / can’t say"/>
+        </LinearLayout>
+            <TextView
+                android:id="@+id/questionTwo"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"
+                android:text="Q2. Do you think BJP has done the right thing by replacing BS
+Yeddyurappa with Basavaraj Bommai as the Chief Minister?"/>
+            <LinearLayout
+                android:id="@+id/lnrLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:layout_marginStart="16dp"
+                    android:buttonTint="@color/black"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_marginStart="16dp"
+                    android:buttonTint="@color/black"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Don’t know / can’t say"
+                    android:layout_marginStart="16dp"
+                    android:buttonTint="@color/black"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/questionThree"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/progressNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"
+                android:text="Q3. Is there any change in your life after Modi became\nPrime
+Minister? (This is a new question added as asked)"/>
+            <LinearLayout
+                android:id="@+id/lnrLayThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="Specify here . . ."
+                    android:minLines="4"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_stroke_quiz"
+                    android:layout_gravity="start|top"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+              <TextView
+            android:id="@+id/questionFour"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:text="Q4. Should the elections be based on?"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Caste"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Religion"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Individual Candidates preference"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Party"/>
+        </LinearLayout>
+            <TextView
+                android:id="@+id/questionFive"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/progressNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"
+                android:text="Q5. Who is the next popular leader that you would like to see as
+your next MLA?
+"/>
+            <LinearLayout
+                android:id="@+id/lnrLayFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Specify here . . ."
+                    android:minLines="4"
+                    android:padding="10dp"
+                    android:gravity="start"
+                    android:background="@drawable/bg_stroke_quiz"
+                    android:layout_gravity="start|top"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_btn_ripple_without_corner"
+                android:backgroundTint="@color/black"
+                android:minWidth="150dp"
+                android:text="Submit"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
