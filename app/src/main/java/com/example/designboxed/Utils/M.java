@@ -85,6 +85,12 @@ public class M {
         mSharedPreferences = mContext.getSharedPreferences(pref_name, 0);
         return mSharedPreferences.getString("username", null);
     }
-
+    //this method will logout the user
+    public void logout() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+    }
 }
 

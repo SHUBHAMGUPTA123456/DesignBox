@@ -22,13 +22,14 @@
             app:tint="@color/black" />
 
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="70dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/icon_logo" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/design_box_logo" />
 
     </RelativeLayout>
 
@@ -41,8 +42,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/bottomBttons"
+            android:scrollbars="none"
+            android:scrollIndicators="none"
             android:background="@drawable/circle_draw_shot"
-            android:paddingTop="30dp">
+            tools:targetApi="m">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -56,7 +59,7 @@
                     android:layout_gravity="center_horizontal"
                     android:alpha=".7"
                     android:padding="6dp"
-                    android:text="Heading of the servey form"
+                    android:text="Karnataka Survey Form"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -110,7 +113,6 @@
                         android:textStyle="bold" />
 
                     <Spinner
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txtCardTytpe"
@@ -128,6 +130,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp">
 
                     <TextView
@@ -167,6 +170,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp">
 
                     <TextView
@@ -205,6 +209,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
                     android:layout_height="wrap_content"
                     android:padding="2dp">
 
@@ -229,6 +234,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp">
 
                     <TextView
@@ -253,6 +259,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp">
 
                     <TextView
@@ -279,6 +286,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp">
 
                     <TextView
@@ -305,6 +313,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp">
 
                     <TextView
@@ -335,13 +344,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/startSurvey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:paddingLeft="50dp"
                 android:paddingTop="6dp"
                 android:paddingRight="50dp"
@@ -357,11 +366,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:paddingLeft="50dp"
                 android:paddingTop="6dp"
                 android:paddingRight="50dp"
                 android:paddingBottom="6dp"
-                android:text="Add New"
+                android:text="Add New Data"
                 android:textAllCaps="false"
                 android:background="@drawable/bg_btn_16dp"
                 android:backgroundTint="@color/green"

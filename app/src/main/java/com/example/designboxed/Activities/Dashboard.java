@@ -26,12 +26,21 @@ public class Dashboard extends AppCompatActivity {
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         recyclerPerform();
+        clickPerform();
+    }
 
+    private void clickPerform() {
         binding.menuIcon.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
         });
         binding.notificationIcon.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), Notification_Activity.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
+        });
+        binding.viewAll.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), AllSurvay.class));
+            overridePendingTransition(R.anim.right_in,R.anim.right_out);
         });
     }
 

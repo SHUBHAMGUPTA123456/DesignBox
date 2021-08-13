@@ -34,12 +34,14 @@
             app:cardCornerRadius="100dp"
             android:layout_centerInParent="true"
             app:cardElevation="0dp"
+            android:translationZ="1dp"
             android:padding="16dp">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:layout_margin="40dp"
-                android:src="@drawable/icon_logo"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/design_box_logo"/>
         </androidx.cardview.widget.CardView>
     <LinearLayout
         android:layout_width="match_parent"

@@ -17,12 +17,12 @@
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/icon_logo" />
+            android:src="@drawable/design_box_logo" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

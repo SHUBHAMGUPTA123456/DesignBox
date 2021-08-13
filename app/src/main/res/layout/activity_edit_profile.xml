@@ -153,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_toRightOf="@id/cardMobile"
-                    android:hint="E-mail"
+                    android:hint="Mobile Number"
                     app:boxStrokeColor="@color/purple_500"
                     app:endIconMode="clear_text"
                     app:endIconTint="@color/black"

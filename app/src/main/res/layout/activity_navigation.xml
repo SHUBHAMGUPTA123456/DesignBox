@@ -162,7 +162,7 @@
                     android:drawableLeft="@drawable/ic_terms"
                     android:drawablePadding="7dp"
                     android:drawableTint="@color/white"
-                    android:text="Term of Use"
+                    android:text="Terms of Use"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     android:textStyle="bold" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,52 +8,55 @@
     android:background="@color/pink"
     tools:context=".Activities.Dashboard">
     <RelativeLayout
+        android:id="@+id/toolRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/toolRel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/simple_ripple"
+            android:src="@drawable/icon_drawer_menu" />
 
-            <ImageView
-                android:id="@+id/menuIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/simple_ripple"
-                android:src="@drawable/icon_drawer_menu" />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/design_box_logo" />
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10sp"
-                android:src="@drawable/icon_logo" />
-
-            <ImageView
-                android:id="@+id/notificationIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/simple_ripple"
-                android:src="@drawable/icon_notification_bell" />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/simple_ripple"
+            android:src="@drawable/icon_notification_bell" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/toolRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/lnrTwo"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolRel"
             android:layout_marginTop="16dp">
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -165,7 +168,7 @@
                 android:alpha=".8"
                 android:layout_marginBottom="8dp"
                 android:layout_toStartOf="@id/viewAll"
-                android:text="Rescently\nAssigned Survey"
+                android:text="Active Survey"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
             <TextView
@@ -174,8 +177,9 @@
                 android:layout_height="wrap_content"
                 android:text="View All"
                 android:layout_margin="8dp"
-                android:padding="4dp"
+                android:padding="8dp"
                 android:textSize="12sp"
+                android:background="@drawable/simple_ripple"
                 android:layout_alignParentEnd="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/black"/>
@@ -190,4 +194,5 @@
                 tools:listitem="@layout/card_rec_servey_list" />
         </RelativeLayout>
     </RelativeLayout>
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>

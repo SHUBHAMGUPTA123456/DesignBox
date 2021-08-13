@@ -30,6 +30,11 @@ public class PrivacyPolicy extends AppCompatActivity {
                 finish();
             }
         });
+        if (ttl.equalsIgnoreCase("Terms of Use")){
+            binding.paraOne.setText("We offer the best and most reliable partner for your Campaigning needs. The following terms of use shall govern the use of our services. This website is owned by DesignBoxed and may be used only for informational purposes.");
+        }else {
+//            binding.paraOne.setText("We offer the best and most reliable partner for your Campaigning needs. The following terms of use shall govern the use of our services. This website is owned by DesignBoxed and may be used only for informational purposes.");
+        }
     }
 
     @Override
