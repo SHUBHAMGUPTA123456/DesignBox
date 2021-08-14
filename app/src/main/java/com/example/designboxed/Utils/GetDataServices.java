@@ -21,5 +21,10 @@ public interface GetDataServices {
     );
     // Get Assignment . . .-assignments
     @GET("assignments")
-    Call<ResponseBody> GetAssignmentApi();
+    Call<ResponseBody> GetAssignmentApi(
+    @Header("Authorization") String adminKey);
+    //Get User Data . . .-getuserdata
+    @GET("getuserdata")
+    Call<ResponseBody> GetUserData(
+            @Header("Authorization") String adminKey);
 }

@@ -3,6 +3,7 @@ package com.example.designboxed.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,18 +39,20 @@ public class Dashboard extends AppCompatActivity {
     private void getActiveSurveyApi() {
         UtilMethods.GetAssignment(getApplicationContext(), new UtilMethods.ApiCallBackTwoMethod() {
             @Override
-            public void onSucess(Object object) throws JSONException {
+            public void onSucess(Object object) {
                 try {
-                    Log.d("GetActiveSurveyApi", "onSucess: "+object);
+                    Log.d("GetActiveSurveyApi", "onSuccess: "+object);
                     JSONObject jsonObject = new JSONObject(String.valueOf(object));
-                    JSONArray jsonArray = jsonObject.getJSONArray("my_assignments");
-                    for (int i = 0; i<jsonArray.length() ; i++){
-                        JSONObject js = jsonArray.getJSONObject(i);
-                        String id = js.getString("id");
-                        String assigned_od = js.getString("assigned_od");
-                        String total_voters_assigned = js.getString("total_voters_assigned");
-                        String area = js.getString("area");
-                        String block = js.getString("block");
+                    if (jsonObject.getString("is_team_leader").equalsIgnoreCase("true")) {
+                        JSONArray jsonArray = jsonObject.getJSONArray("my_assignments");
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject js = jsonArray.getJSONObject(i);
+                            String id = js.getString("id");
+                            String assigned_od = js.getString("assigned_od");
+                            String total_voters_assigned = js.getString("total_voters_assigned");
+                            String area = js.getString("area");
+                            String block = js.getString("block");
+                        }
                     }
                 }catch (JSONException e){
                     e.printStackTrace();
@@ -58,6 +61,7 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onError(String errorMsg) {
                 Log.d("GetActiveSurveyApi", "onError: "+errorMsg);
+                Toast.makeText(Dashboard.this, errorMsg, Toast.LENGTH_SHORT).show();
             }
         });
     }
