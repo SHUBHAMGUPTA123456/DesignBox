@@ -20,7 +20,6 @@ public class UtilMethods {
     public static String UPlat = "0.0";
     public static String UPlng = "0.0";
 
-
     private static void dialogOk(final Context context, final String message, final int flag) {
         try {
             new AlertDialog.Builder(context)
@@ -70,9 +69,7 @@ public class UtilMethods {
         matcher = pattern.matcher(password);
 
         return matcher.matches();
-
     }
-
 
     public interface ApiCallBackTwoMethod {
         void onSucess(Object object) throws JSONException;
@@ -102,8 +99,6 @@ public class UtilMethods {
                         apiCallBack.onError("No record found");
                     }
                 }
-
-
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                     apiCallBack.onError("No record found " + t.getLocalizedMessage());
@@ -114,8 +109,39 @@ public class UtilMethods {
             apiCallBack.onError("No Internet");
 //          Toast.makeText(context, "No Internet", Toast.LENGTH_SHORT).show();
         }
-
     }
-
-
+    // Get Assignment . . .
+    public static void GetAssignment(final Context context, final ApiCallBackTwoMethod apiCallBack) {
+        if (new ConnectionDetector(context).isConnectingToInternet()) {
+            RetrofitClient.getInstance();
+            Call<ResponseBody> bodyCall = RetrofitClient.getDataServices().GetAssignmentApi();
+            bodyCall.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    String s;
+                    if (response.isSuccessful()) {
+                        try {
+                            s = response.body().string();
+                            Log.d("GetActiveSurvey", "onSuccess: " + s);
+                            apiCallBack.onSucess(s);
+                        } catch (IOException | JSONException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        dialogOk(context, "Error: " + response.errorBody().toString(), 1);
+                        Log.d("GetActiveSurvey", "onResponse: " + response.errorBody());
+                        apiCallBack.onError("No record found");
+                    }
+                }
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    apiCallBack.onError("No record found " + t.getLocalizedMessage());
+                    Log.d("GetActiveSurvey", "onFailure: " + t.getLocalizedMessage());
+                }
+            });
+        } else {
+            apiCallBack.onError("No Internet");
+//          Toast.makeText(context, "No Internet", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

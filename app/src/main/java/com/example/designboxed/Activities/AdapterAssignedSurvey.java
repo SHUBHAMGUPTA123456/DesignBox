@@ -32,6 +32,7 @@ public class AdapterAssignedSurvey extends RecyclerView.Adapter<AdapterAssignedS
 
     @Override
     public void onBindViewHolder(@NonNull holderVie holder, int position) {
+        holder.cBinding.imgIcon.setImageResource(modelAssignedSurveys.get(position).getImg());
         holder.cBinding.openSurvey.setOnClickListener(v -> {
             Intent ig = new Intent(context, ShowServeyDetails.class);
             ig.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

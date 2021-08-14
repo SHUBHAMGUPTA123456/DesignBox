@@ -29,7 +29,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bangluru Urban Legeslative Election Survey"
+            android:text="Karnataka Survey Form"
             android:textSize="16sp"
             android:gravity="center_horizontal"
             android:layout_marginTop="16dp"

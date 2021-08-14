@@ -27,7 +27,6 @@ ActivityQuestionFormBinding binding;
                 finish();
             });
         }
-
     private void clickPerform() {
         binding.btnSave.setOnClickListener(v -> {
             startActivity(new Intent(this, SurvayCompleted.class));

@@ -24,10 +24,6 @@ public class NavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.userProfile.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), Profile_Activity.class));
-            overridePendingTransition(R.anim.right_in,R.anim.right_out);
-        });
         binding.noti.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), Notification_Activity.class));
             overridePendingTransition(R.anim.right_in,R.anim.right_out);

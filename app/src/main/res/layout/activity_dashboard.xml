@@ -21,6 +21,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:padding="8dp"
             android:background="@drawable/simple_ripple"
             android:src="@drawable/icon_drawer_menu" />
 
@@ -36,14 +37,28 @@
             android:id="@+id/notificationIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_toStartOf="@id/profileSection"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:padding="8dp"
             android:background="@drawable/simple_ripple"
             android:src="@drawable/icon_notification_bell" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileSection"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/design_box_logo"/>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
     <ScrollView
         android:layout_below="@id/toolRel"
